@@ -1,0 +1,31 @@
+@mixin animate ( $attr, $time, $style ) {
+    -webkit-transition: $attr $time $style;
+    -moz-transition: $attr $time $style;
+    -ms-transition: $attr $time $style;
+    -o-transition: $attr $time $style;
+    transition: $attr $time $style;
+} 
+/* example */
+@include animate (opacity, 0.3s, ease );
+@include animate (transform, 0.3s, ease );
+
+
+@mixin transform ( $val ) {
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+    transform: $val;
+}
+/* example */
+@include transform (translateY(0px));
+@include transform (rotate(0deg));
+
+
+@mixin transorigin ( $val1, $val2 ) {
+    -webkit-transform-origin: $val1 $val2;
+    -moz-transform-origin: $val1 $val2;
+    -ms-transform-origin: $val1 $val2;
+    -o-transform-origin: $val1 $val2;
+    transform-origin: $val1 $val2;
+}
